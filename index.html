@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Miyuki Pink Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="header">
+    <h1 class="logo">Miyuki Pink Studio</h1>
+    <nav>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#combinacion">Combinación</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Accesorios con Miyuki ✨</h2>
+    <p>Aretes y camándulas.</p>
+    <a href="#catalogo" class="btn">Ver catálogo</a>
+  </section>
+
+  <main id="catalogo" class="catalogo">
+    <h2 class="titulo">Nuestro catálogo</h2>
+
+    <input type="text" id="buscador" placeholder="Buscar accesorio...">
+
+    <div class="filtros">
+      <button class="filtro activo" data-categoria="todos">Todos</button>
+      <button class="filtro" data-categoria="aretes">Aretes</button>
+      <button class="filtro" data-categoria="camandulas">Camándulas</button>
+      <button class="filtro" data-categoria="favoritos">♡ Favoritos (<span id="contadorFav">0</span>)</button>
+    </div>
+
+    <div id="productos" class="productos"></div>
+  </main>
+
+  <section id="combinacion" class="combinacion">
+    <h2 class="titulo">Arma tu combinación ✨</h2>
+    <p>Toca "Combinar" en unos aretes y en una camándula para verlos juntos.</p>
+
+    <div class="combo-slots">
+      <div class="slot" id="slot-aretes"></div>
+      <span class="mas">+</span>
+      <div class="slot" id="slot-camandulas"></div>
+    </div>
+
+    <div class="combo-acciones">
+      <button id="limpiarCombo" class="btn btn-secundario">Limpiar</button>
+      <a id="enviarCombo" class="btn" target="_blank">Pedir esta combinación 💕</a>
+    </div>
+  </section>
+
+  <footer id="contacto" class="footer">
+    <p>¿Te gustó algo? Escríbenos 💌</p>
+    <p>WhatsApp: +57 305 368 5137</p>
+    <small>© 2026 Miyuki Pink Studio</small>
+  </footer>
+
+  <!-- Visor de zoom -->
+  <div id="visor" class="visor">
+    <button class="cerrar-visor" id="cerrarVisor">✕</button>
+    <div class="visor-contenido">
+      <img id="visorImg" src="" alt="">
+    </div>
+    <p id="visorNombre"></p>
+    <small class="visor-ayuda">Toca la foto para acercar 🔍</small>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
